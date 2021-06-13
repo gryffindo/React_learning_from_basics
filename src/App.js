@@ -1,9 +1,17 @@
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Clock from "./components/Clock";
+
 function App() {
   return (
-    <div>
-      <h1> Hello world  </h1>
-      <hr />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <div>
+            <Clock />
+          </div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
